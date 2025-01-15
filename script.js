@@ -1,4 +1,4 @@
-// add variable references and event listeners here!
+
 document.getElementById('search-form').addEventListener('submit', handleSearch);
 
 document.getElementById('sort-rating').addEventListener('click', handleSort);
@@ -6,12 +6,7 @@ document.getElementById('sort-rating').addEventListener('click', handleSort);
 
 /**
  * Searches for books using the Google Books API based on the given query and type.
- *
- * @async
- * @param {string} query - The search term (title, ISBN, or author name).
- * @param {string} type - The type of search to perform (e.g., 'title', 'isbn', 'author').
- * @returns {Promise<Array>} A promise that resolves to an array of book objects.
- *
+
  * @description
  * This function allows users to search for books using the Google Books API.
  * It performs the following actions:
@@ -26,9 +21,6 @@ document.getElementById('sort-rating').addEventListener('click', handleSort);
  *    - ebook_access: Information about ebook availability
  *    - first_publish_year: Year of first publication
  *    - ratings_sortable: Book ratings information
- * 
- * Hint: Regarding steps 3 and 4, consider using the Array object's map() method and assign the above properties as keys. Extract the correct values from the JSON using dot notation. Print your results often for debugging!
- * 
  */
 async function searchBooks(query, type) {
     const apiKey = 'AIzaSyBreD8tr9R3YxBEIbm-6YaH68TNTZZegzk';
@@ -66,8 +58,6 @@ async function searchBooks(query, type) {
 
 /**
 * Takes in a list of books and updates the UI accordingly.
-*
-* @param {Array} books - An array of book objects to be displayed.
 *
 * @description
 * This function takes an array of book objects and creates a visual representation
@@ -114,10 +104,6 @@ function displayBookList(books) {
 
 /**
  * Handles the search form submission and updates the UI with search results.
- * 
- * @async
- * @param {Event} event - The form submission event.
- * 
  * @description
  * This function is triggered when the user submits the search form with id 'search-form'.
  *
@@ -144,8 +130,6 @@ async function handleSearch(event) {
 /**
  * Displays detailed information about a single book when it's clicked.
  * 
- * @param {Object} book - The book object containing detailed information.
- * 
  * @description
  * This function is triggered when a user clicks on a book in the list.
  * It updates the UI to show detailed information about the selected book.
@@ -161,10 +145,6 @@ async function handleSearch(event) {
  *    - ISBN
  *    - Ebook access value
  *    - Rating
- * 
- * Note: The order and specific layout of the book information within the
- * 'selected-book' element is flexible and determined by the developer.
- * 
  */
 function displaySingleBook(book) {
     const selectedBookElement = document.getElementById('selected-book');
