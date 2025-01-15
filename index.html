@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Find The Book</h1>
+    </header>
+
+    <main>
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Search by title, author, or ISBN" required>
+            <select id="search-type">
+                <option value="title">Title</option>
+                <option value="author">Author</option>
+                <option value="isbn">ISBN</option>
+            </select>
+            <button type="submit" id="search-button">Search</button>
+
+        </form>
+
+        <div id="filter-sort">
+            <label for="ebook-filter">
+                <input type="checkbox" id="ebook-filter"> Show only e-books
+            </label>
+            <button id="sort-rating">Sort by Rating</button>
+        </div>
+
+        <section><ul id="book-list"></ul></section>
+
+<div id="selected-book" style="display: none;">
+    <button id="back-to-list">Back to List</button> 
+    <h2 class="title-element" id="book-title"></h2>
+    <p class="author-element" id="book-author"></p>
+    <p class="published-element" id="book-first-publish-year"></p>
+    <p class="isbn-element" id="book-isbn"></p>
+    <p class="ebook-element" id="book-ebook-access"></p>
+    
+    <p class="rating-element" id="book-rating"></p>
+   
+    <img class="cover-element" id="book-cover" src="" alt="Book Cover">
+</div>
+
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
