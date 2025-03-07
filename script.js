@@ -183,14 +183,19 @@ function handleFilter() {
     const allBooks = Array.from(document.querySelectorAll('#book-list > li'));
 
     allBooks.forEach(bookItem => {
-        const ebookElement = bookItem.querySelector('.ebook-element').textContent;
-        if (isChecked && ebookElement !== 'Available') {
+    
+        const ebookElement = bookItem.querySelector('.ebook-element');
+    
+        const ebookStatus = ebookElement ? ebookElement.textContent.trim() : '';
+
+        if (isChecked && ebookStatus !== 'E-book: Available') {
             bookItem.style.display = 'none';
         } else {
             bookItem.style.display = 'block';
         }
     });
 }
+
 
 
 /**
